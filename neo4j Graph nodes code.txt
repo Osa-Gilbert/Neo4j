@@ -1,0 +1,436 @@
+
+
+
+
+
+CREATE(France: Country {name: 'France', Continent: 'Europe', Currency: 'Euro', population : '65.66 million', president: 'Emmanuel Macron'})
+CREATE (paris:TouristDestination { Name: 'Paris', Region: 'Île-de-France', Population: 2.1, Area: 105, Latitude: 48.8566, Longitude: 2.3522, Mayor: 'Anne Hidalgo'})
+CREATE (lyon:TouristDestination { Name: 'Lyon', Region: 'Auvergne-Rhône-Alpes', Population: 1.76, Area: 47.87, Latitude: 48.8566, Longitude: 2.3522, Mayor: 'Grégory Doucet'})
+CREATE (marseille:TouristDestination { Name: 'Marseille', Region: 'Provence-Alpes-Côte d Azur', Population: 1.63, Area: 240.6, Latitude: 48.8566, Longitude: 2.3522, Mayor: 'Benoît Payan' })
+CREATE (toulouse:TouristDestination { Name: 'Toulouse', Region: 'Occitania', Population: 1.06, Area: 118.3, Latitude: 48.8566, Longitude: 2.3522, Mayor: 'Jean-Luc Moudenc'})
+CREATE (nice:TouristDestination { Name: 'Nice', Region: 'Provence-Alpes-Côte d Azur', Population: 948, Area: 71.92, Latitude: 48.8566, Longitude: 2.3522, Mayor: 'Christian Estrosi'})
+
+
+CREATE (hilton:Accommodation {Name: 'Hilton Paris Opera', Location: 'Paris',Type: 'hotel',Rooms: 268,RoomRate: 250,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (ibis:Accommodation {Name: 'Ibis Opera', Location: 'Paris',Type: 'hotel',Rooms: 317 ,RoomRate: 140, Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (pullman:Accommodation {Name: 'Pullman Paris', Location: 'Paris',Type: 'hotel',Rooms: 417 , RoomRate: 340, Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Peninsula:Accommodation {Name: 'Peninsula', Location: 'Paris',Type: 'hotel',Rooms: 147 ,RoomRate: 145, Amenities: 'swimming pool, Wi-Fi, gym, restaurant'})
+CREATE (Radisson:Accommodation {Name: 'Radisson Blu', Location: 'Paris',Type: 'hotel',Rooms: 176 ,RoomRate: 200, Amenities: 'Wi-Fi, gym, restaurant'})
+
+
+CREATE (Louvre:Tourist_Attraction {Name:'Louvre Museum', Location: 'Paris', opening_hours:'09:00', closing_hours :'18:00', Type :'historical site', Opened: 'August 10, 1793',Contractor: 'I. M. Pei', EntranceFee: 7.50, AverageVisitorRating : 4.7})
+
+CREATE (Notre_Dame:Tourist_Attraction {Name:'Notre Dame de Paris',location:'Paris', opening_hours:'09:30', closing_hours :'18:00', Type :'Cathedral', Opened: '1345',Contractor: 'Jean de Chelles',EntranceFee: 0, AverageVisitorRating : 4.4 })
+
+CREATE (Élysées:Tourist_Attraction {Name:'Champs-Élysées', location:'Paris', opening_hours:'09:00', closing_hours :'18:00', Type :'Avenue', EntranceFee:'free', AverageVisitorRating: 4.5})
+
+CREATE (Triomphe:Tourist_Attraction {Name:'Arc de Triomphe', location:'Paris', opening_hours:'10:00', closing_hours :'23:30', Type :'historical site', opened: 'July 29, 1836', Contractor:'Jean Chalgrin', EntranceFee: 13, AverageVisitorRating :4.6})
+
+CREATE (Orsay:Tourist_Attraction {Name:'Musée d Orsay', location:'Paris', opening_hours:'10:00', closing_hours :'23:30', Type :'historical site', opened: 'July 29, 1836', Contractor:'Jean Chalgrin', EntranceFee: 12, AverageVisitorRating : 3.7})
+
+
+CREATE (RER:Transport { Name: 'RER',Type: 'Commuter Train',Description: 'The Réseau Express Régional (Regional Express Network) is a rapid transit system serving Paris and its suburbs. It has five lines connecting the city center to the suburbs and beyond.',TravelTime: 45,Price: 3.70})
+
+CREATE (Paris_Metro:Transport { Name: 'Paris Metro',Type: 'Subway',Description: 'The Paris Metro is a rapid transit system serving Paris and its suburbs. It is the second busiest metro system in Europe, after the Moscow Metro.',TravelTime: 30,Price: 1.90})
+
+CREATE (Paris_Bus:Transport { Name: 'Paris Bus',Type: 'Bus',Description: 'The Paris Bus network consists of over 60 lines, serving the city and its suburbs.',TravelTime: 60,Price: 2.00})
+
+CREATE (Paris_Taxi:Transport {Name: 'Paris Taxi',Type: 'Taxi',Description: 'Taxis in Paris can be hailed on the street, at taxi stands, or by phone. The fares are regulated by the city government and vary depending on the time of day and the distance traveled.',TravelTime: 30,Price: 15.00})
+
+CREATE (Vélib:Transport {Name: 'Vélib',Type: 'Bicycle Sharing',Description: 'Vélib is a public bicycle sharing system in Paris, France. It was launched in 2007 and has since grown to become one of the largest bike sharing schemes in the world.',TravelTime: 45,Price: 5.00})
+
+CREATE (Le:restaurant {Name: "Le Jules Verne", Cuisine: "French", PriceRange: 4})
+CREATE (Atelier:restaurant {Name: "L'Atelier de Joël Robuchon", Cuisine: "French", PriceRange: 4})
+CREATE (Relais:restaurant {Name: "Le Comptoir du Relais", Cuisine: "French", PriceRange: 2})
+CREATE (Chateaubriand:restaurant {Name: "Le Chateaubriand", Cuisine: "French", PriceRange: 2})
+CREATE (Jean:restaurant {Name: "Chez L'Ami Jean", Cuisine: "French", PriceRange: 3})
+CREATE (Cork:restaurant {Name: 'The Cork and Cavan', address: '70 Quai de Jemmapes, 75010 Paris', PriceRange: 3, Cuisine: 'Irish'})
+CREATE (Kitty:restaurant {Name: "Kitty O'Shea", address: '10 Rue des Capucines, 75001 Paris', PriceRange: 2, Cuisine: 'Irish'})
+CREATE (Sullivan:restaurant {Name: "O'Sullivan", address: '92 Boulevard de Clichy, 75018 Paris', PriceRange: 1, Cuisine: 'Irish'})
+CREATE (Green:restaurant {Name: 'The Green Linnet', address: '8 Rue Saint-Julien Le Pauvre, 75005 Paris', PriceRange: 2, Cuisine: 'Irish'})
+CREATE (Corcoran:restaurant {Name: "Corcoran's", address: '28 Quai des Grands Augustins, 75006 Paris', PriceRange: 2, Cuisine: 'Irish'})
+
+
+
+
+
+
+
+
+
+CREATE (Ibis:Accommodation {Name: 'ibis_lyon', Location: 'Lyon',Type: 'hotel',Rooms: 108,RoomRate: 150,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (MOB:Accommodation {Name: 'MOB HOTEL', Location: 'Lyon',Type: 'hotel',Rooms: 3057 ,RoomRate: 92.40, Amenities: 'Wi-Fi, gym, swimming pool, restaurant'})
+CREATE (Charlemagne:Accommodation {Name: 'Hôtel Charlemagne', Location: 'Lyon',Type: 'hotel',Rooms: 217 , RoomRate: 172.40, Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (ouest:Accommodation {Name: 'Lyon-ouest', Location: 'Lyon',Type: 'hotel',Rooms: 142 ,RoomRate: 82.30, Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Remparts:Accommodation {Name: 'Hôtel des Remparts', Location: 'Lyon',Type: 'hotel',Rooms: 167 ,RoomRate: 85, Amenities: 'Wi-Fi, gym, restaurant'})
+
+
+CREATE
+(lyon_Attraction :Attraction {name:'lyon Attraction'})
+CREATE (Saint:lyon_Attraction {Name:'Saint-Jean-Baptiste', Location: 'Lyon', opening_hours:'08:15', closing_hours :'19:45', Type :'Cathedral', Opened: '1480', Contractor: 'Jacques de Beaujeu', EntranceFee: 1.50, AverageVisitorRating : 4.6})
+
+CREATE (Confluences:lyon_Attraction {Name:'Musée des Confluences', Location: 'Lyon', opening_hours:'08:15', closing_hours :'19:30', Type :'Museum', Opened: 'December 20, 2014',Contractor: 'Wolf D. Prix', EntranceFee: 9, AverageVisitorRating : 4.5})
+
+CREATE (Terreaux:lyon_Attraction {Name:'Place des Terreaux', Location: 'Lyon', opening_hours:'24 hours', closing_hours :' ', Type :'Plaza', Opened: 'December 20, 2014', Contractor: 'I. M. Gilberto', EntranceFee: 0, AverageVisitorRating : 3.3})
+
+CREATE (Basilica:lyon_Attraction {Name:'Basilica of Notre-Dame', Location: 'Lyon', opening_hours:'09:00', closing_hours :'18:00', Type :'Basilica', Opened: 'August 10, 1793',Contractor: 'I. M. Pei', EntranceFee: 10.50, AverageVisitorRating : 3.9})
+
+CREATE (Bellecour:lyon_Attraction {Name:'Place Bellecour', Location: 'Lyon', opening_hours:'07:00', closing_hours :'20:00', Type :'Place', Opened: '1884', Contractor: 'Pierre Bossan', EntranceFee: 0.00, AverageVisitorRating : 4.0})
+
+
+
+CREATE (Lyon_Metro:Transport {Name: 'Lyon Metro',Type: 'Subway',Description: 'The Lyon Metro is a rapid transit system serving Lyon and its suburbs. It consists of four lines and 42 stations, and is operated by TCL (Transports en Commun Lyonnais).',TravelTime: 25,Price: 1.90})
+
+CREATE (Lyon_Tramway:Transport {Name: 'Lyon Tramway',Type: 'Tram',Description: 'The Lyon Tramway is a light rail system serving Lyon and its suburbs. It has six lines and 85 stations, and is operated by TCL.',TravelTime: 40,Price: 1.90})
+
+CREATE (Lyon_Bus:Transport {Name: 'Lyon Bus',Type: 'Bus',Description: 'The Lyon Bus network consists of over 130 lines, serving the city and its suburbs. It is operated by TCL (Transports en Commun Lyonnais).',TravelTime: 50,Price: 2.00})
+
+CREATE (Vélo:Transport {Name: 'Vélo',Type: 'Bicycle Sharing',Description: 'Vélo is a public bicycle sharing system in Lyon, France. It was launched in 2005 and has since grown to become one of the largest bike-sharing schemes in the world.',TravelTime: 40,Price: 2.00})
+
+CREATE (Lyon_Taxi:Transport {Name: 'Lyon Taxi',Type: 'Taxi',Description: 'Taxis in Lyon can be hailed on the street, at taxi stands, or by phone. The fares are regulated by the city government and vary depending on the time of day and the distance traveled.',TravelTime: 30,Price: 15.00
+})
+
+
+CREATE (Bouchon:restaurant {Name: "Bouchon des Filles", Cuisine: "French", PriceRange: 2})
+CREATE (Chez:restaurant {Name: "Chez Hugon", Cuisine: "French", priceRange: 3})
+CREATE (Comptoir:restaurant {Name: "Le Comptoir de l'Est", Cuisine: "French", PriceRange: 3})
+CREATE (Bistrot:restaurant {Name: "Le Bistrot de l'École des Plantes", Cuisine: "French", PriceRange: 2})
+CREATE (Café:restaurant {Name: "Café Comptoir Abel", Cuisine: "French", PriceRange: 2})
+
+CREATE (Melting:restaurant {Name: "The Melting Pot", Cuisine: "Irish", priceRange: 2, Location: "Lyon"})
+CREATE (Le_Pub:restaurant {Name: "Le Pub & Eatery", Cuisine: "Irish", priceRange: 2, Location: "Lyon"})
+CREATE (Smoking_Dog:restaurant {Name: "The Smoking Dog", Cuisine: "Irish", priceRange: 3, Location: "Lyon"})
+CREATE (Kelly:restaurant {Name: "Kelly's Kitchen", Cuisine: "Irish", priceRange: 2, Location: "Lyon"})
+CREATE (Fruity:restaurant {Name: "Le Fruity's", Cuisine: "Irish", priceRange: 2, Location: "Lyon"})
+
+
+
+
+CREATE (Residhotel:Accommodation {Name: 'Residhotel Vieux Port', Location: 'Marseille',Type: 'B and B',Rooms: 18,RoomRate: 94,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Bellevue:Accommodation {Name: 'Hotel Bellevue', Location: 'Marseille',Type: 'hotel',Rooms: 26,RoomRate: 150,Amenities: 'Wi-Fi, gym, restaurant,car park'})
+CREATE (Maison:Accommodation {Name: 'Maison Saint Louis', Location: 'Marseille',Type: 'hotel',Rooms: 268,RoomRate: 40,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (radisson:Accommodation {Name: 'Radisson Blu Hotel', Location: 'Marseille',Type: 'hotel',Rooms: 268,RoomRate: 210,Amenities: 'Wi-Fi, gym, swimming pool, restaurant'})
+CREATE (Golden:Accommodation {Name: 'Golden Tulip Villa', Location: 'Marseille',Type: 'hotel',Rooms: 268,RoomRate: 119,Amenities: 'Wi-Fi, gym, pool, restaurant'})
+
+CREATE
+(marseille_Attraction :Attraction {name:'marseille Attraction'})
+CREATE (Old_Port:marseille_Attraction {Name:'Old Port of Marseille', Location: 'Marseille', opening_hours:'08:15', closing_hours :'19:45', Type :'Port', Opened: '1880', Contractor: 'Jacques de Beaujeu', EntranceFee: 0.00, AverageVisitorRating : 4.5})
+
+CREATE (Mucem:marseille_Attraction {Name:'Mucem', Location: 'Marseille', opening_hours:'07:15', closing_hours :'19:00', Type :'Monument', Opened: 'June 7, 2013', Contractor: 'Rudy Ricciotti', EntranceFee: 7.50, AverageVisitorRating : 3.7})
+
+CREATE (Notre_Dame_de_la_Garde:marseille_Attraction {Name:'Notre Dame de la Garde', Location: 'Marseille', opening_hours:'08:15', closing_hours :'20:00', Type :'Port', Opened: '1864', Contractor: 'Rudy Ricciotti', EntranceFee: 0.00, AverageVisitorRating : 4.4})
+
+CREATE (Marseille_Cathedral:marseille_Attraction {Name:'Marseille Cathedral', Location: 'Marseille', opening_hours:'08:00', closing_hours :'19:45', Type :'Port', Opened: 'November 30, 1893', Contractor: 'Léon Vaudoyer', EntranceFee: 0.00, AverageVisitorRating : 4.5})
+
+CREATE (Château:marseille_Attraction {Name:'Château d If', Location: 'Marseille', opening_hours:'10:00', closing_hours :'18:00', Type :'Prison', Opened: '1527', EntranceFee: 6.00, AverageVisitorRating : 4.5})
+
+
+CREATE (Bus_21:Transport {Name:'Bus 21', Type: 'Bus', Line: 21 ,Description:'This is a popular bus line that runs through Marseille and connects several TouristDestination', TravelTime: 20})
+CREATE (Metro:Transport {Name:'Metro Line 1', Type: 'Metro', Line: '1',Description:'The Metro Line 1 in Marseille is one of the busiest and most important public transportation lines in the city' ,TravelTime: 10})
+CREATE (Tramway:Transport {Name:'Tramway',Type: 'Tramway', Line: 'T3', TravelTime: 15})
+CREATE (Ferry:Transport {Name:'Ferry',Type: 'Ferry', Line: 'Chateau dIf', TravelTime: 30})
+CREATE (Bicycle:Transport {Name:'Bicycle',Type: 'Bicycle', Line: 'Velo Bleu', TravelTime: 5})
+
+
+CREATE (Miramar:restaurant {Name: 'Le Miramar', Cuisine: 'French', PriceRange: 2})
+CREATE (Malthazar:restaurant {Name: 'Le Malthazar', Cuisine: 'French', PriceRange: 3})
+CREATE (ChezFonfon:restaurant {Name: 'Chez Fonfon', Cuisine: 'French', PriceRange: 3})
+CREATE (Épices:restaurant {Name: 'Le Café des Épices', Cuisine: 'French', PriceRange: 2})
+CREATE (Grain:restaurant {Name: 'Le Grain de Sel', Cuisine: 'French', PriceRange: 2})
+
+CREATE (Queens_Legs:restaurant {Name: "The Queen's Legs", PriceRange: 3, Cuisine: 'Irish'})
+CREATE (Black_Unicorn:restaurant {Name: 'The Black Unicorn', PriceRange: 2, Cuisine: 'Irish'})
+CREATE (Irish_Rover:restaurant {Name: 'The Irish Rover', PriceRange: 3, Cuisine: 'Irish'})
+CREATE (Shamrock:restaurant {Name: 'The Shamrock', PriceRange: 2, Cuisine: 'Irish'})
+CREATE (Finn:restaurant {Name: "Finn McCool's", PriceRange: 3, Cuisine: 'Irish'})
+
+
+
+
+
+
+CREATE (SOCLO:Accommodation {Name: 'Hotel SOCLO Toulouse', Location: 'Toulouse',Type: 'hotel',Rooms: 67,RoomRate: 199,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Arts:Accommodation {Name: 'Hotel des Arts', Location: 'Toulouse',Type: 'hotel',Rooms: 62,RoomRate: 107,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Plaza:Accommodation {Name: ' Plaza Hotel Capitole', Location: 'Toulouse',Type: 'hotel',Rooms: 67,RoomRate: 115,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Ibis_Styles:Accommodation {Name: 'Ibis Styles Toulouse Capitole', Location: 'Toulouse',Type: 'hotel',Rooms: 101,RoomRate: 134,Amenities: 'Wi-Fi, gym, restaurant'})
+CREATE (Arena:Accommodation {Name: 'Hotel Arena', Location: 'Toulouse',Type: 'hotel',Rooms: 47,RoomRate: 106,Amenities: 'Wi-Fi, gym, restaurant'})
+
+
+CREATE
+(toulouse_Attraction :Attraction {name:'toulouse Attraction'})
+CREATE (Muséum_de_Toulouset:toulose_Attraction {Name:'Muséum de Toulouse', Location: 'Toulouse', opening_hours:'10:00', closing_hours :'18:00', Type :'Museum',EntranceFee: 7.00, AverageVisitorRating : 4.5})
+CREATE (Place_du_Capitole:toulose_Attraction {Name:'Place du Capitole', Location: 'Toulouse', opening_hours:'24 hours',  Type :'Historical landmark', EntranceFee: 0.00, AverageVisitorRating : 4.5})
+CREATE (Pont_Neuf:toulose_Attraction {Name:'Pont Neuf', Location: 'Toulouse', opening_hours:'08:15', closing_hours :'19:45', Type :'Bridge', Contractor: 'Jacques Lemercier', EntranceFee: 0.00, AverageVisitorRating : 4.6})
+CREATE (Couvent:toulose_Attraction {Name:'Couvent des Jacobins', Location: 'Toulouse', opening_hours:'10:00', closing_hours :'18:00', Type :'Cultural landmark', Opened: '1230', EntranceFee: 4.00, AverageVisitorRating : 4.1})
+CREATE (Les_Abattoirs:toulose_Attraction {Name:'Les Abattoirs', Location: 'Toulouse', opening_hours:'12:00', closing_hours :'18:00', Type :'Art museum', Opened:'2000', EntranceFee: 2.00, AverageVisitorRating : 4.3})
+
+CREATE (Line_A:Transport {Type: 'Metro', Name: 'Line A', TravelTime: 10})
+CREATE (T1:Transport {Type: 'Tramway', Name: 'T1', TravelTime: 15})
+CREATE (Line_29:Transport {Type: 'Bus', Name: 'Line 29', TravelTime: 20})
+CREATE (VélôToulouse:Transport {Type: 'Bicycle Sharing', Name: 'VélôToulouse', TravelTime: 5})
+CREATE (Navette_Aéroport:Transport {Type: 'Airport Shuttle', Name: 'Navette Aéroport', TravelTime: 30})
+
+
+CREATE (Emile:restaurant {Name: 'Chez Emile', Cuisine: 'French', PriceRange: 3, Location: 'Toulouse'})
+CREATE (Bibent:restaurant {Name: 'Le Bibent', Cuisine: 'French', PriceRange: 4, Location: 'Toulouse'})
+CREATE (GO:restaurant {Name: "Le J'Go", Cuisine: 'French', PriceRange: 3, Location: 'Toulouse'})
+CREATE (Louchebem:restaurant {Name: 'Le Louchebem', Cuisine: 'French', PriceRange: 2, Location: 'Toulouse'})
+CREATE (Fiancée:restaurant {Name: 'La Fiancée', Cuisine: 'French', PriceRange: 3, Location: 'Toulouse'})
+
+CREATE (George :restaurant {Name: 'The George Pub', Cuisine: 'Irish', PriceRange: 2, Location: 'Toulouse'})
+CREATE ( Killarney:restaurant {Name: 'The Killarney', Cuisine: 'Irish', PriceRange: 3, Location: 'Toulouse'})
+CREATE (Fitzpatrick:restaurant {Name: "Fitzpatrick’s Irish Pub", Cuisine: 'Irish', PriceRange: 2, Location: 'Toulouse'})
+CREATE (Connell:restaurant {Name: "O'Connell's Irish Pub", Cuisine: 'Irish', PriceRange: 2, Location: 'Toulouse'})
+CREATE (Connemara:restaurant {Name: 'The Connemara Irish Pub', Cuisine: 'Irish', PriceRange: 2, Location: 'Toulouse'})
+
+
+
+
+CREATE (Villa:Accommodation {Name: 'Villa Rivoli', Location: 'Nice',Type: 'hotel',Rooms: 67,RoomRate: 143,Amenities: 'Wi-Fi,complimentary newspapers, gym, restaurant, bar'})
+CREATE (Radisson_Blu:Accommodation {Name: 'Radisson Blu Hotel, Nice', Location: 'Nice',Type: 'hotel',Rooms:300,RoomRate: 349,Amenities: 'Wi-Fi, gym, sauna, restaurant, swimming pool'})
+CREATE (Holiday:Accommodation {Name: 'Holiday Inn Express', Location: 'Nice',Type: 'hotel',Rooms: 267,RoomRate: 126,Amenities: 'Wi-Fi, gym, restaurant, laundry service'})
+CREATE (La_Pérouse:Accommodation {Name: 'La Pérouse', Location: 'Nice',Type: 'hotel',Rooms: 57,RoomRate: 199,Amenities: 'Wi-Fi, gym, restaurant, hot tub, beach access'})
+CREATE (Riviera:Accommodation {Name: 'Hôtel Nice Riviera', Location: 'Nice',Type: 'hotel',Rooms: 70,RoomRate: 143,Amenities: 'Wi-Fi, gym, spa, restaurant'})
+
+
+
+CREATE (nice_Attraction :Attraction {name:'nice Attraction'})
+
+CREATE (Castle_Hill: nice_Attraction {Name:'Castle Hill', Location: 'Nice', opening_hours:'08:00', closing_hours :'20:00', Type :'Park and Garden', EntranceFee: 0.00, AverageVisitorRating : 4.7})
+
+CREATE (Marc: nice_Attraction  {Name:'Marc Chagall National Museum', Location: 'Nice', opening_hours:'10:30', closing_hours :'16:00', Type :'Museum',EntranceFee: 8.00, AverageVisitorRating : 4.4})
+CREATE (Parc_Phoenix: nice_Attraction  {Name:'Parc Phoenix', Location: 'Nice', opening_hours:'09:30', closing_hours :'18:00', Type :'Animal park',EntranceFee: 4.00, AverageVisitorRating : 4.2})
+CREATE (place_massena:nice_Attraction  {Name:'place massena', Location: 'Nice', opening_hours:'24 hours', Type :'Historical landmark',EntranceFee: 10.00, AverageVisitorRating : 2.7})
+CREATE (Cathredal: nice_Attraction {Name:'Saint Stephen Cathredal', Location: 'Nice', opening_hours:'08:00', closing_hours :'19:00', Type :'Monument',EntranceFee: 25.00, AverageVisitorRating : 4.3})
+
+
+
+CREATE (Train_TER:Transport {Type: 'Train', Name: 'TER', TravelTime: 45})
+CREATE (TAXI:Transport {Type: 'Taxi', Name: 'Taxi', TravelTime: 20})
+CREATE (Lime:Transport {Type: 'Electric Scooter Sharing', Name: 'Lime', TravelTime: 15})
+CREATE (Corsica:Transport {Type: 'Ferry', Name: 'Corsica Ferries', TravelTime: 120})
+CREATE (Europcar:Transport {Type: 'Car Rental', Name: 'Europcar', TravelTime: 0})
+
+
+
+
+CREATE (Chantecler:restaurant {Name: 'Le Chantecler', Cuisine: 'French', PriceRange: 4, location: 'Nice'})
+CREATE (Univers:restaurant {Name: "L'Univers" , Cuisine: 'French', PriceRange: 3, location: 'Nice'})
+CREATE (Antoine:restaurant {Name: "Bistrot d'Antoine" , Cuisine: 'French', PriceRange: 2, location: 'Nice'})
+CREATE (Julien:restaurant {Name: "L'Atelier de Julien", Cuisine: 'French', PriceRange: 2, location: 'Nice'})
+CREATE (Marché:restaurant {Name: 'Le Comptoir du Marché', Cuisine: 'French', PriceRange: 2, location: 'Nice'})
+
+
+CREATE (Snug:restaurant {Name: "The Snug", cuisine: "Irish", priceRange: 2, city: "Nice"})
+CREATE (Molly:restaurant {Name: "Molly Malone's", cuisine: "Irish", priceRange: 2, city: "Nice"})
+CREATE (Dubliner:restaurant {Name: "The Dubliner", cuisine: "Irish", priceRange: 3, city: "Nice"})
+CREATE (Irish_Pub:restaurant {Name: "O'Sullivan's Irish Pub", cuisine: "Irish", priceRange: 2, city: "Nice"})
+CREATE (Paddy:restaurant {Name: "Paddy's Pub", cuisine: "Irish", priceRange: 2, city: "Nice"})
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE (paris)<-[:has_TouristDestination]-(France)
+CREATE (lyon)<-[:has_TouristDestination]-(France)
+CREATE (toulouse)<-[:has_TouristDestination]-(France)
+CREATE (nice)<-[:has_TouristDestination]-(France)
+CREATE (marseille)<-[:has_TouristDestination]-(France)
+
+CREATE (hilton)-[:LOCATED_IN]->(paris)
+CREATE (ibis)-[:LOCATED_IN]->(paris)
+CREATE (pullman)-[:LOCATED_IN]->(paris)
+CREATE (Peninsula)-[:LOCATED_IN]->(paris)
+CREATE (Radisson)-[:LOCATED_IN]->(paris)
+
+
+
+CREATE (Louvre)-[:ATTRACTION_IN]->(paris)
+CREATE (Notre_Dame)-[:ATTRACTION_IN]->(paris)
+CREATE (Élysées)-[:ATTRACTION_IN]->(paris)
+CREATE (Triomphe)-[:ATTRACTION_IN]->(paris)
+CREATE (Orsay)-[:ATTRACTION_IN]->(paris)
+
+CREATE (RER)-[:CONNECTS_TO]->(paris)
+CREATE (Paris_Metro)-[:CONNECTS_TO]->(paris)
+CREATE (Paris_Bus)-[:CONNECTS_TO]->(paris)
+CREATE (Paris_Taxi)-[:CONNECTS_TO]->(paris)
+CREATE (Vélib)-[:CONNECTS_TO]->(paris)
+
+CREATE (Le)-[:Restaurant_IN]->(paris)
+CREATE (Atelier)-[:Restaurant_IN]->(paris)
+CREATE (Relais)-[:Restaurant_IN]->(paris)
+CREATE (Chateaubriand)-[:Restaurant_IN]->(paris)
+CREATE (Jean)-[:Restaurant_IN]->(paris)
+CREATE (Cork)-[:Restaurant_IN]->(paris)
+CREATE (Kitty)-[:Restaurant_IN]->(paris)
+CREATE (Sullivan)-[:Restaurant_IN]->(paris)
+CREATE (Green)-[:Restaurant_IN]->(paris)
+CREATE (Corcoran)-[:Restaurant_IN]->(paris)
+
+
+
+
+
+
+
+
+
+
+CREATE (Ibis)-[:LOCATED_IN]->(lyon)
+CREATE (MOB)-[:LOCATED_IN]->(lyon)
+CREATE (Charlemagne)-[:LOCATED_IN]->(lyon)
+CREATE (ouest)-[:LOCATED_IN]->(lyon)
+CREATE (Remparts)-[:LOCATED_IN]->(lyon)
+
+
+CREATE (lyon_Attraction)-[:LOCATED_IN]->(lyon)
+
+CREATE (Saint)-[:ATTRACTION_IN]->(lyon_Attraction)
+CREATE (Confluences)-[:ATTRACTION_IN]->(lyon_Attraction)
+CREATE (Terreaux)-[:ATTRACTION_IN]->(lyon_Attraction)
+CREATE (Basilica)-[:ATTRACTION_IN]->(lyon_Attraction)
+CREATE (Bellecour)-[:ATTRACTION_IN]->(lyon_Attraction)
+
+
+CREATE (Lyon_Metro)-[:CONNECTS_TO]->(lyon)
+CREATE (Lyon_Tramway)-[:CONNECTS_TO]->(lyon)
+CREATE (Lyon_Bus)-[:CONNECTS_TO]->(lyon)
+CREATE (Lyon_Taxi)-[:CONNECTS_TO]->(lyon)
+CREATE (Vélo)-[:CONNECTS_TO]->(lyon)
+
+
+CREATE (Bouchon)-[:Restaurant_IN]->(lyon)
+CREATE (Chez)-[:Restaurant_IN]->(lyon)
+CREATE (Comptoir)-[:Restaurant_IN]->(lyon)
+CREATE (Bistrot)-[:Restaurant_IN]->(lyon)
+CREATE (Café)-[:Restaurant_IN]->(lyon)
+CREATE (Melting)-[:Restaurant_IN]->(lyon)
+CREATE (Le_Pub)-[:Restaurant_IN]->(lyon)
+CREATE (Smoking_Dog)-[:Restaurant_IN]->(lyon)
+CREATE (Kelly)-[:Restaurant_IN]->(lyon)
+CREATE (Fruity)-[:Restaurant_IN]->(lyon)
+
+
+
+
+
+CREATE (Residhotel)-[:LOCATED_IN]->(marseille)
+CREATE (Bellevue)-[:LOCATED_IN]->(marseille)
+CREATE (Maison)-[:LOCATED_IN]->(marseille)
+CREATE (radisson)-[:LOCATED_IN]->(marseille)
+CREATE (Golden)-[:LOCATED_IN]->(marseille)
+
+
+CREATE (marseille_Attraction)-[:LOCATED_IN]->(marseille)
+CREATE (Old_Port)-[:ATTRACTION_IN]->(marseille_Attraction)
+CREATE (Mucem)-[:ATTRACTION_IN]->(marseille_Attraction)
+CREATE (Notre_Dame_de_la_Garde)-[:ATTRACTION_IN]->(marseille_Attraction)
+CREATE (Marseille_Cathedral)-[:ATTRACTION_IN]->(marseille_Attraction)
+CREATE (Château)-[:ATTRACTION_IN]->(marseille_Attraction)
+
+CREATE (Bus_21)-[:CONNECTS_TO]->(marseille)
+CREATE (Metro)-[:CONNECTS_TO]->(marseille)
+CREATE (Tramway)-[:CONNECTS_TO]->(marseille)
+CREATE (Ferry)-[:CONNECTS_TO]->(marseille)
+CREATE (Bicycle)-[:CONNECTS_TO]->(marseille)
+
+
+CREATE (Miramar)-[:Restaurant_IN]->(marseille)
+CREATE (Malthazar)-[:Restaurant_IN]->(marseille)
+CREATE (ChezFonfon)-[:Restaurant_IN]->(marseille)
+CREATE (Épices)-[:Restaurant_IN]->(marseille)
+CREATE (Grain)-[:Restaurant_IN]->(marseille)
+CREATE (Queens_Legs)-[:Restaurant_IN]->(marseille)
+CREATE (Black_Unicorn)-[:Restaurant_IN]->(marseille)
+CREATE (Irish_Rover)-[:Restaurant_IN]->(marseille)
+CREATE (Shamrock)-[:Restaurant_IN]->(marseille)
+CREATE (Finn)-[:Restaurant_IN]->(marseille)
+
+
+
+CREATE (SOCLO)-[:LOCATED_IN]->(toulouse)
+CREATE (Arts)-[:LOCATED_IN]->(toulouse)
+CREATE (Plaza)-[:LOCATED_IN]->(toulouse)
+CREATE (Ibis_Styles)-[:LOCATED_IN]->(toulouse)
+CREATE (Arena)-[:LOCATED_IN]->(toulouse)
+
+CREATE (toulouse_Attraction)-[:LOCATED_IN]->(toulouse)
+CREATE (Muséum_de_Toulouset)-[:ATTRACTION_IN]->(toulouse_Attraction)
+CREATE (Place_du_Capitole)-[:ATTRACTION_IN]->(toulouse_Attraction)
+CREATE (Pont_Neuf)-[:ATTRACTION_IN]->(toulouse_Attraction)
+CREATE (Couvent)-[:ATTRACTION_IN]->(toulouse_Attraction)
+CREATE (Les_Abattoirs)-[:ATTRACTION_IN]->(toulouse_Attraction)
+
+
+CREATE (Line_A)-[:CONNECTS_TO]->(toulouse)
+CREATE (T1)-[:CONNECTS_TO]->(toulouse)
+CREATE (Line_29)-[:CONNECTS_TO]->(toulouse)
+CREATE (VélôToulouse)-[:CONNECTS_TO]->(toulouse)
+CREATE (Navette_Aéroport)-[:CONNECTS_TO]->(toulouse)
+
+
+CREATE (Emile)-[:Restaurant_IN]->(toulouse)
+CREATE (Bibent)-[:Restaurant_IN]->(toulouse)
+CREATE (GO)-[:Restaurant_IN]->(toulouse)
+CREATE (Louchebem)-[:Restaurant_IN]->(toulouse)
+CREATE (Fiancée)-[:Restaurant_IN]->(toulouse)
+CREATE (George)-[:Restaurant_IN]->(toulouse)
+CREATE (Killarney)-[:Restaurant_IN]->(toulouse)
+CREATE (Fitzpatrick)-[:Restaurant_IN]->(toulouse)
+CREATE (Connell)-[:Restaurant_IN]->(toulouse)
+CREATE (Connemara)-[:Restaurant_IN]->(toulouse)
+
+
+
+
+
+
+
+CREATE (Villa)-[:LOCATED_IN]->(nice)
+CREATE (Radisson_Blu)-[:LOCATED_IN]->(nice)
+CREATE (Holiday)-[:LOCATED_IN]->(nice)
+CREATE (La_Pérouse)-[:LOCATED_IN]->(nice)
+CREATE (Riviera)-[:LOCATED_IN]->(nice)
+
+CREATE (nice_Attraction)-[:LOCATED_IN]->(nice)
+CREATE (Castle_Hill)-[:ATTRACTION_IN]->(nice_Attraction)
+CREATE (Marc)-[:ATTRACTION_IN]->(nice_Attraction)
+CREATE (Parc_Phoenix)-[:ATTRACTION_IN]->(nice_Attraction)
+CREATE (place_massena)-[:ATTRACTION_IN]->(nice_Attraction)
+CREATE (Cathredal)-[:ATTRACTION_IN]->(nice_Attraction)
+
+CREATE (Train_TER)-[:CONNECTS_TO]->(nice)
+CREATE (TAXI)-[:CONNECTS_TO]->(nice)
+CREATE (Lime)-[:CONNECTS_TO]->(nice)
+CREATE (Corsica)-[:CONNECTS_TO]->(nice)
+CREATE (Europcar)-[:CONNECTS_TO]->(nice)
+
+
+CREATE (Chantecler)-[:Restaurant_IN]->(nice)
+CREATE (Univers)-[:Restaurant_IN]->(nice)
+CREATE (Antoine)-[:Restaurant_IN]->(nice)
+CREATE (Julien)-[:Restaurant_IN]->(nice)
+CREATE (Marché)-[:Restaurant_IN]->(nice)
+CREATE (Snug)-[:Restaurant_IN]->(nice)
+CREATE (Molly)-[:Restaurant_IN]->(nice)
+CREATE (Dubliner)-[:Restaurant_IN]->(nice)
+CREATE (Irish_Pub)-[:Restaurant_IN]->(nice)
+CREATE (Paddy)-[:Restaurant_IN]->(nice)
+
+
+
+
+
+
+
+
+
+
